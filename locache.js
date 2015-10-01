@@ -20,7 +20,7 @@
     var root = this;
 
     //Check if Promises is available
-    if (!window['Promise'])
+    if (!root['Promise'])
       console.log("Promise isn't available at this browser");
 
     // Object context bnding shim to support older versions of IE.
@@ -103,7 +103,7 @@
     var supportsNativeJSON = LocacheCache.prototype.supportsNativeJSON = !!root.JSON;
 
     // Boolean flag to check if the browser supports HTML postMessage.
-    var supportsPostMessage = LocacheCache.prototype.supportsPostMessage = !!window.postMessage;
+    var supportsPostMessage = LocacheCache.prototype.supportsPostMessage = !!root.postMessage;
 
     // Internal utility functions
     // --------------------
